@@ -2,6 +2,8 @@
 
 @import 'variables-mixins';
 
+@import 'header';
+
 *{
     margin: 0;
     padding: 0;
@@ -14,17 +16,21 @@
 
 h1, h2, h3, h4, h5, h6, a, 
 p, textarea, input, label{
-  max-width: 45ch;
+    max-width: 45ch;
   
-  @include responsive(mobile){
-    max-width: 50ch;
-  }
+    @include responsive(mobile){
+        max-width: 50ch;
+    }
 
-  @include responsive(tablet){
-    max-width: 55ch;
-  }
+    @include responsive(tablet){
+        max-width: 55ch;
+    }
 
-  @include responsive(screen){
-    max-width: 60ch;
-  }
+    @include responsive(screen){
+        max-width: 60ch;
+    }
+}
+
+a{
+    display: inline-block;
 }
