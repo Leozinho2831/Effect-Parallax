@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px 5%;
+
+    h1{
+        @include fontTitle(40 , bold);
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        a{
+            @include fontText(20, 600);
+        }
+
+        li:last-of-type a{
+            display: flex;
+            align-items: center;
+
+            figure{
+                width: 20px;
+                height: 30px;
+                margin: 0 0 0 20px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        } 
+    }
+}
