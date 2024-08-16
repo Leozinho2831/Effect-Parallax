@@ -1,0 +1,51 @@
+$font: 'Poppins', sans-serif;
+
+@function rem($pixels, $context: 16){
+    @return ($pixels / $context) * 1rem;
+}
+
+@function lineHeight-title($fontSize){
+    @return ($fontSize * 1.25px);
+}
+
+@function lineHeight-text($fontSize){
+    @return ($fontSize * 1.3px);
+}
+
+@mixin fontTitle($fontSize, $fontWeight){
+    font: {
+        size: rem($fontSize);
+        weight: $fontWeight;
+    }
+    line-height: lineHeight-title($fontSize);
+}
+
+@mixin fontText($fontSize, $fontWeight){
+    font: {
+        size: rem($fontSize);
+        weight: $fontWeight;
+    }
+    line-height: lineHeight-title($fontSize);
+}
+
+@mixin responsive($widthScreen){
+    @if $widthScreen == mobile{
+
+        @media (min-width: 480px){
+            @content;
+        }
+
+    } @else if $widthScreen == tablet{
+
+        @media (min-width: 768px){
+            @content;
+        }
+
+    } @else if $widthScreen == screen{
+
+        @media (min-width: 1024px){
+            @content;
+        }
+
+    }
+}
