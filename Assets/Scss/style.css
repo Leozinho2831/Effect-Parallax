@@ -9,7 +9,7 @@
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 @media (min-width: 480px) {
   .header {
@@ -98,6 +98,7 @@
   min-height: 55vh;
   background-image: linear-gradient(to top, #d2e2fb 30%, #86a8d8);
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .main__introduction {
@@ -138,6 +139,8 @@
   gap: 20px;
   padding: 50px 5%;
   background-color: #3b3291;
+  position: relative;
+  z-index: 2;
 }
 .main__about h1 {
   font-size: 2.5rem;

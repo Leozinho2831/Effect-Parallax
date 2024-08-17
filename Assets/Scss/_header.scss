@@ -9,7 +9,7 @@
     width: 100%;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 
     @include responsive(mobile){
         flex-wrap: none;
