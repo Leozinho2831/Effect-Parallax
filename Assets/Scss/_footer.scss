@@ -1,0 +1,86 @@
+.footer{
+    background-color: $bg-section;
+
+    h1{
+        @include fontTitle(40, 600);
+        text-align: center;
+        color: $grey-1;
+
+        @include responsive(tablet){
+            @include fontTitle(50, bold);
+        }
+    }
+
+    address{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 50px 5%;
+
+        picture{
+            display: flex;
+            align-items: center;
+            gap: rem(50);
+
+            a{
+                width: 30px;
+                height: 30px;
+                transition: all 0.1s;
+    
+                @include responsive(mobile){
+                    width: 40px;
+                    height: 40px;
+                }
+    
+                @include responsive(tablet){
+                    width: 60px;
+                    height: 60px;
+                }
+    
+                @include responsive(screen){
+                    width: 80px;
+                    height: 80px;
+                }
+
+                img{
+                    transition: all 0.1s;
+    
+                    &:hover{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+
+        }
+    }
+
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 5%;
+
+        border-top: 2px solid $border-footer;
+
+        p{
+            @include fontText(18, 500);
+            color: $grey-1;
+
+            @include responsive(screen){
+                @include fontText(20, 500);
+            }
+
+            a{
+                color: $grey-2;
+
+                transition: all 0.1s;
+
+                &:hover{
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
