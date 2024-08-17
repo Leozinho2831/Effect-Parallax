@@ -3,6 +3,8 @@
 @import 'variables-mixins';
 
 @import 'header';
+@import 'main';
+@import 'footer';
 
 *{
     margin: 0;
@@ -14,23 +16,24 @@
     font-family: $font;
 }
 
-h1, h2, h3, h4, h5, h6, a, 
-p, textarea, input, label{
-    max-width: 45ch;
-  
-    @include responsive(mobile){
-        max-width: 50ch;
-    }
-
-    @include responsive(tablet){
-        max-width: 55ch;
-    }
-
-    @include responsive(screen){
-        max-width: 60ch;
-    }
+html, body{
+    overflow-x: hidden;
 }
 
 a{
-    display: block;
+    display: inline-block;
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+}
+
+@media (min-width: 2000px){
+    p{
+        max-width: 200ch;
+    }
 }
