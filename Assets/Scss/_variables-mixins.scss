@@ -1,4 +1,11 @@
 $font: 'Poppins', sans-serif;
+$bg-links: #5247b9;
+$bg-section: #3b3291;
+$border-footer: #6c56cf;
+$white: #ffffff;
+$grey-1: #ececec;
+$grey-2: #dddddd;
+$black: #000000;
 
 @function rem($pixels, $context: 16){
     @return ($pixels / $context) * 1rem;
@@ -25,7 +32,7 @@ $font: 'Poppins', sans-serif;
         size: rem($fontSize);
         weight: $fontWeight;
     }
-    line-height: lineHeight-title($fontSize);
+    line-height: lineHeight-text($fontSize);
 }
 
 @mixin responsive($widthScreen){
