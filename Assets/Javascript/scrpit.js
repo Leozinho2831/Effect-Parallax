@@ -1,8 +1,7 @@
 function initScroll(){
     const linksHref = document.querySelectorAll('.js-links a[href^="#"]');
-    const sections = document.querySelectorAll('.js-sections');
 
-    if(linksHref && sections){
+    if(linksHref){
 
         function scrollSmooth(event){
             event.preventDefault();
