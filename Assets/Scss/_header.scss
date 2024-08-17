@@ -2,12 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 40px;
 
     padding: 20px 5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    @include responsive(mobile){
+        flex-wrap: none;
+    }
 
     h1{
         @include fontTitle(40 , bold);
+        color: $grey-1;
+
+        @include responsive(tablet){
+            @include fontTitle(50 , bold);
+        }
     }
 
     ul{
@@ -15,25 +29,69 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 20px;
 
-        a{
-            @include fontText(20, 600);
+        @include responsive(tablet){
+            gap: 30px;
         }
 
-        li:last-of-type a{
+        li{
+            a{
+                @include fontText(20, 600);
+    
+                padding: 8px 16px;
+                border-radius: 100px;
+                color: $grey-1;
+                transition: all 0.3s;
+
+                @include responsive(tablet){
+                    @include fontText(24, 600);
+                    padding: 10px 20px;
+                }
+
+                &.now-page{
+                    background: $bg-links;
+                }
+    
+                &:hover{
+                    background-color: $bg-links;
+                }
+    
+            }
+
+            &:hover > a:not(:hover){
+                background: none;
+            }
+        }
+
+        
+        &:hover > li a:not(:hover){
+            background: none;
+        }
+
+        &:last-of-type a{
             display: flex;
             align-items: center;
 
             figure{
                 width: 20px;
                 height: 30px;
-                margin: 0 0 0 20px;
+                margin: 0 0 0 12px;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include responsive(tablet){
+                    width: 24px;
+                    height: 32px;
+                    margin: 0 0 0 15px;
+                }
+
+                img{
+                    height: 100%;
+                }
             }
-        } 
+        }
     }
 }
