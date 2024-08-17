@@ -5,6 +5,7 @@
     background-image: linear-gradient(to top, #d2e2fb 30%, #86a8d8);
 
     position: relative;
+    overflow: hidden;
 
     @include responsive(screen){
         min-height: 100vh;
@@ -39,6 +40,9 @@
     gap: 20px;
     padding: 50px 5%;
     background-color: $bg-section;
+
+    position: relative;
+    z-index: 2;
 
     h1{
         @include fontTitle(40, 600);
