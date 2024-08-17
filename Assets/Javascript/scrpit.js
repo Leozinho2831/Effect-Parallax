@@ -6,14 +6,13 @@ function initScroll(){
 
         function scrollSmooth(event){
             event.preventDefault();
-            sections.forEach((section) => {
+            const href = this.getAttribute('href');
+            const selectHref = document.querySelector(href);
 
-                section.scrollIntoView({
+                selectHref.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-
-            });
         }
     
         linksHref.forEach((linkHref) => {
