@@ -16,20 +16,12 @@
     font-family: $font;
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
 a{
     display: inline-block;
 }
 
 img{
     width: 100%;
-}
-
-main{
-    min-height: 100vh;
 }
 
 @media (min-width: 2000px){
